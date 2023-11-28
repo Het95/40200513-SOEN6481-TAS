@@ -3,6 +3,7 @@
 % Version 2.20 of 2017/10/04
 %
 \documentclass{llncs}
+\usepackage{graphicx}
 \makeatletter
 \@twosidefalse
 \@mparswitchfalse
@@ -11,8 +12,12 @@
 \usepackage{hyperref}
 \usepackage{setspace}
 \onehalfspacing
+\usepackage{float}
 \pagestyle{headings}
 \setcounter{tocdepth}{8}
+\usepackage{sectsty}
+\sectionfont{\fontsize{15}{14}\selectfont}
+\subsectionfont{\fontsize{13}{13}\selectfont}
 %
 \usepackage{graphicx}
 % Used for displaying a sample figure. If possible, figure files should
@@ -22,27 +27,39 @@
 % to display URLs in blue roman font according to Springer's eBook style:
 % \renewcommand\UrlFont{\color{blue}\rmfamily}
 
+
 \begin{document}
 %
-\title{Distributed Teams Are Founded on Explicit
-Communication Channels}
+
+\title{
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{logoENCS.jpeg}
+    \label{fig:example}
+\end{figure}
+
+Distributed Teams Are Founded on Explicit
+Communication Channels\vspace{30pt}}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{Het Jatin Dalal - Student ID: 40200513}
-%
 
+\author{\large \textbf{Het Jatin Dalal - Student ID: 40200513}\vspace{20pt}}
 %
-\institute{Computer Science and Software Engineering , Concordia University \\ 
-\vspace{10pt}  VCS: Github: \href{https://github.com/Het95/40200513-SOEN6481-TAS}{https://github.com/Het95/40200513-SOEN6481-TAS}}
+%
+\institute{\large \textbf{SOEN 6841- Software Project Management} \\ 
+\vspace{15pt} \textbf{Advisor: Pankaj Kamthan} \\
+\vspace{60pt} \textbf{Computer Science and Software Engineering , Concordia University} \\ 
+\vspace{15pt} \textbf{ VCS: Github: \href{https://github.com/Het95/40200513-SOEN6481-TAS}{https://github.com/Het95/40200513-SOEN6481-TAS}}}
 
 {\def\addcontentsline#1#2#3{}\maketitle}
 
-
+\newpage
 \begin{abstract}
-An increase in team size makes it harder to communicate effectively across floors, rooms, cities, or even separate geographical areas. The increased usage of explicit communication channels has thereby improved productivity as well as a number of other aspects of working in a distributed team environment. A team can manage and develop more quickly if written communication is taken into consideration. It also explains how several forms of communication—synchronous, asynchronous, or a mix of the two—are needed to share resources, fill in knowledge gaps, and handle urgent matters. 
+\large An increase in team size makes it harder to communicate effectively across floors, rooms, cities, or even separate geographical areas. The increased usage of explicit communication channels has thereby improved productivity as well as a number of other aspects of working in a distributed team environment. A team can manage and develop more quickly if written communication is taken into consideration. It also explains how several forms of communication—synchronous, asynchronous, or a mix of the two—are needed to share resources, fill in knowledge gaps, and handle urgent matters. 
 
 \keywords{Explicit communication \and information gaps \and Synchronous \and Ashyncronous \and Distributed team}
 \end{abstract}
@@ -56,14 +73,14 @@ An increase in team size makes it harder to communicate effectively across floor
 %\tableofcontents
 %\newpage
 
-\section{Introduction}
-\subsection{Motivation}
+\section{ Introduction}
+\subsection{ Motivation}
 
 \begin{figure}   
     \includegraphics[width=0.2\linewidth]{DTlogo.png}
 \end{figure}
 
-The motivation for researching "Distributed Teams Established on Explicit Defined Communication Channels" stems from a number of key considerations and the difficulties of modern work contexts.
+The motivation for researching "Distributed Teams Established on Explicit Defined Communication Channels" stems from a number of key considerations and the difficulties of modern work contexts. \\
 
 \begin{enumerate}
     \item \textbf{Surge in popularity of Distributed Team}: The majority of businesses with growing workforces are shifting to distributed team structure, particularly in light of recent pandemics like COVID-19. This makes it much more important in such an environment to collaborate and communicate effectively.~\cite{refbook1}
@@ -86,7 +103,7 @@ For the context of the report, it is important to know all the following terms i
     \item \textbf{Synchronous \& Asynchronous communication channels}: 
     Synchronous communication channels, which primarily include voice messages, video conferencing apps, instant messaging apps, and in-person meetings if dispersed nearby, can be used to facilitate real-time dialogue between various team members from all walks of life, from information technology to hospitals~\cite{refbook1}~\cite{refpaper1}.
     Asynchronous communication channels , which primarily include collaborative documents like Google Docs, forums, task tracking applications like Jira, Trello, and emails~\cite{refpaper2}, can be used to avoid real-time talk and communicate as needed or by deadline.~\cite{refbook1} \\
-    \item \textbf{Multichannel chats}: Multicommunication channels are used to connect with two or more people at the same time or as needed~\cite{refpaper2}, and include group chats such as Discord. They can be more effective if these communication channels are integrated with project management software or document sharing platforms, ensuring that information is immediately accessible to the team.~\cite{refpaper4}\\
+    \item \textbf{Multichannel chats}: Multicommunication channels are used to connect with two or more people at the same time or as needed i.e synchronously or asynchronously~\cite{refpaper2}, and include group chats such as Slack. They can be more effective if these communication channels are integrated with project management software or document sharing platforms, ensuring that information is immediately accessible to the team.~\cite{refpaper4}\\
     \item \textbf{Computer Mediated Communication}:  Computer Mediated Communication (CMC) refers to "any human interaction, which are symbolic text-based, directed or facilitated over digitally-based technologies" as well as "the method of creating, exchanging and perceiving the information, which aids encode, decode and transmit the messages by means of telecommunication network. It includes the Internet, text messaging on mobile phones, email, instant messaging.~\cite{refpaper5}
 \end{itemize}
 
@@ -113,17 +130,22 @@ For the context of the report, it is important to know all the following terms i
     \item Synchronous communication methods, such as Skype, can facilitate daily meetings and discussions, which can speed up work processes and increase overall productivity. The channels for communication can be arranged according to various subjects, allowing team members to use these impromptu conversations to quickly and easily solve problems that might arise at work. This demonstrates how Skype may improve communication by enabling quicker problem-solving. Furthermore, Skype offers a versatile platform that fosters collaboration and enables independent work, effectively overcoming geographical constraints.~\cite{refpaper8}. \\
     \item The potential of telecommuting and project-related travel could foster a distributed work environment even when the team is based in one location. Implementing clear communication guidelines, such as specifying one's location (e.g., at home or at work) and detailing ongoing activities (e.g., working on a bug), serves as an effective strategy to enhance transparency within the team. This helps in increasing overall efficiency of team.~\cite{refpaper8}
 \end{itemize}
- 
 
-\subsection{Approach 3}
-Barriers that are synchronous and asychronous can be overcome with the help of multichannel chats.~\cite{refbook1} In this case study, a research was conducted to use Facebook for multichannel chats for development of web based product for 3 universities in Pakistan. The study revolves around understanding the aspects  influencing channel choice, team composition, data collection methods supported by qualitative and quantitative analysis methods, including social network analysis, emotion analysis, and socio-technical congruence, to draw insights into team dynamics, communication patterns, and coordination effectiveness. Facebook's proposed model outlines how it can be used for efficient communication, including duties like elucidating software requirements, testing, development, and design, as well as tracking advancement and team coordination activities like meetings and resource sharing. The categories of official and informal communication through various channels encompass these main functions of Facebook. ~\cite{refpaper9}
+\subsection{Enhancing Team Dynamics through Multi-Communication Channels}
+
+\begin{itemize}
+    \item Multichannel chats have become a important stepping stone for modern communication and distributive environment offering synchronous such as instant messaging or virtual meetings and aynchronous communication such as sharing information.~\cite{refbook1}  \\
+    \item The team should establish explicit guidelines or norms for group communication, as everyone's interpretation of norms may differ due to cultural differences. The team should have several types of communication channels dedicated to each perspective, such as frontend, backend, and UX. This helps to avoid unnecessary posting on the general channel, which helps to avoid distraction. \\
+    \item Slack can be used to gather feedback on activities, bridge information gaps, and develop relationships among team members by creating "out of office" communication channels.
+\end{itemize}
+
 
 \section{Findings \& Conclusions}
 
 \begin{itemize}
     \item Computer Mediated Asynchronous Communicaiton has helped us how we pursue teamwork, communicaiton and decision making. CMAC teams can communicate, share information, and make decisions in the context of distributed work environment.CMAC teams are easily scalable, allowing for the inclusion of more professionals or the creation of subteams as needed. This flexibility makes it possible for team members to easily share conversations and information electronically, do research, and consult other experts. ~\cite{refpaper6}\\
     \item Skype offered numerous people a way to communicate with CMC. It is an easy and dependable method of conducting synchronous communication. The impact and significance of a technology are not determined by the range of functions it offers. Instead, its usage and influence are shaped by how people choose to use and adopt the technology. Highly innovative approaches have developed around SkypeTM  helping in overcoming  temporal and spatial limitations and providing more detail on the concepts of awareness, availability, and presence.~\cite{refpaper8}\\
-    \item According to approach 3, the study's findings indicate that companies in developing nations may find it advantageous to use explicit channels such as Facebook for team coordination and communication in a distributed work environment. Notwithstanding certain privacy and confidentiality issues, these might be resolved by implementing Facebook's security features. ~\cite{refpaper9}
+    \item It is imperative to establish communication norms and introduce various channels to facilitate teamwork. Using multichannel communication chats, such as Slack, can help to improve teamwork, close information gaps, provide feedback, and improve overall efficiency. ~\cite{refpaper9}
 
 \end{itemize}
 
@@ -161,7 +183,7 @@ Lalsing, Vikash, Somveer Kishnah, and Sameerchand Pudaruth. "People factors in a
 \bibitem{refpaper8}
 Riemer, Kai, Frank Frößler, and Stefan Klein. "Real time communication-modes of use in distributed teams." (2007)
 \bibitem{refpaper9}
-Ferdous, Sehrish, and Naveed Ikram. Communication and Coordination Using Facebook: A Case Study of Distributed Software Development." Journal of Information Science \& Engineering 33.6 (2017)
+Stray, Viktoria, Nils Brede Moe, and Mehdi Noroozi. "Slack me if you can! using enterprise social networking tools in virtual agile teams." 2019 ACM/IEEE 14th International Conference on Global Software Engineering (ICGSE). IEEE, 2019
 \bibitem{refpaper10}
 Bano, Muneera, Didar Zowghi, and Natalie Sarkissian. "Empirical study of communication structures and barriers in geographically distributed teams." IET software 10.5 (2016): 147-153.
 \bibitem{refpaper11}
