@@ -26,12 +26,13 @@
 }{%
   \endquotation
 }
-
+\usepackage{appendix}
 \usepackage{sectsty}
 \sectionfont{\fontsize{15}{14}\selectfont}
 \subsectionfont{\fontsize{13}{13}\selectfont}
 %
 \usepackage{graphicx}
+\usepackage[title]{appendix}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -189,7 +190,7 @@ For the context of the report, it is important to know all the following terms a
 
 \end{itemize}
 
-
+\bibliographystyle{splncs04}
 \begin{thebibliography}{8}
 \bibitem{refbook1}
 97 Things Every Engineering Manager Should Know [Book],” www.oreilly.com.
@@ -216,12 +217,29 @@ Stray, Viktoria, Nils Brede Moe, and Mehdi Noroozi. "Slack me if you can! using 
 Bano, Muneera, Didar Zowghi, and Natalie Sarkissian. "Empirical study of communication structures and barriers in geographically distributed teams." IET software 10.5 (2016): 147-153.
 \bibitem{refpaper11}
 Benke, Ivo, Michael Thomas Knierim, and Alexander Maedche. "Chatbot-based emotion management for distributed teams: A participatory design study." Proceedings of the ACM on Human-Computer Interaction 4.CSCW2 (2020): 1-30.
-
 \bibitem{reficon1}
 “Free Icons,” Icons8.com, 2019. \url{https://icons8.com/icons}
 
 \bibitem{GenAi}
 Acknowledgments: chatgpt, perplexity
 \end{thebibliography}
+
+\begin{subappendices}
+\renewcommand{\thesection}{\Alph{section}}
+\section{Images used}
+\begin{itemize}
+    \item This picture is meant to visually aid the reader's comprehension of a distributed work environment. \url{https://icons8.com/icons}
+    \item The communication complexity figure was used to show how communication gets complex with increase in  size
+\end{itemize}
+\section{Use of Tools}
+\begin{itemize}
+    \item The overleaf, web based latex IDE generated latex code which was integrated with Vscode desktop version so that the changes done in overleaf gets reflected in vscode and those changes can then be pushed to github for version control. \url{https://www.overleaf.com/} 
+    \item Tools like Grammerly were used for grammer checking and making content more refined.\url{https://www.grammarly.com/}
+    \item Generative Artificial Intelligence tools like Chatgpt was used to analyse the case study given for Topic analysis and synthesis \textbf{Example of Some Prompts used}: Difference between Distributed work environment and Remote environment, What is meaning of shoulder tapping, Explain me concept of multichannel chats, summarise me the case study, proof reading and for getting help with latex \url{https://chat.openai.com}
+\end{itemize}
+
+\end{subappendices}
+
+
 
 \end{document}
